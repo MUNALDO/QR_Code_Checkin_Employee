@@ -13,8 +13,9 @@ const ScanQR = () => {
     if (data && !isAttendanceChecked) {
       try {
         setAttendanceChecked(true);
-        const timestamp = new Date().toISOString();
+        // const timestamp = new Date().toISOString();
         const expectedQRDataArray = department.map(dept => `QR code for department ${dept.name}`);
+        console.log(expectedQRDataArray);
 
         if (expectedQRDataArray.includes(data)) {
           const res = await axios.post(
@@ -39,8 +40,6 @@ const ScanQR = () => {
       }
     }
   };
-
-  console.log(handleScan);
 
   const handleError = (error) => {
     console.error("QR code scanning error:", error);
