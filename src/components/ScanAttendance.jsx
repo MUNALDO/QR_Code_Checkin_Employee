@@ -9,7 +9,7 @@ const ScanQR = () => {
   } = useContext(AuthContext);
   const [isAttendanceChecked, setAttendanceChecked] = useState(false);
 
-  console.log(a);
+  console.log("a");
 
   const handleScan = async (data) => {
     if (data && !isAttendanceChecked) {
