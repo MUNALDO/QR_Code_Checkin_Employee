@@ -3,12 +3,12 @@ import QRCode from 'react-qr-code';
 
 const GenerateQR = () => {
     const [selectedDepartment, setSelectedDepartment] = useState('');
-    const [qrData, setQRData] = useState(`QR code for department - ${Date.now()}`);
+    const [qrData, setQRData] = useState(`QR code for department`);
 
     useEffect(() => {
         const updateQRCode = () => {
             const timestamp = new Date().toISOString();
-            setQRData(`QR code for department ${selectedDepartment} - ${timestamp}`);
+            setQRData(`QR code for department ${selectedDepartment}`);
         };
 
         updateQRCode();
