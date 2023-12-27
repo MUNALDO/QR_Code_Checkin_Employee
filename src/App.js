@@ -8,15 +8,14 @@ import React from "react";
 import ScheduleTable from "./pages/Calendar/Calendar.jsx";
 
 function App() {
-  const [qrData, setQRData] = React.useState("");
 
   return (
     <BrowserRouter>
       <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/generate-qr" element={<GenerateQR setQRData={setQRData} />} />
-          <Route path="/scan-qr" element={<ScanQR qrData={qrData} />} />
+          <Route path="/generate-qr" element={<GenerateQR/>} />
+          <Route path="/scan-qr" element={<ScanQR/>} />
           <Route path="/employee-calendar" element={<ScheduleTable />} />
         </Routes>
       </AuthContextProvider>
