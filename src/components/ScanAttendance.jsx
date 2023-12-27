@@ -19,7 +19,7 @@ const ScanQR = () => {
         const expectedQRDataArray = department.map(dept => `QR code for department ${dept.name}`);
         console.log(expectedQRDataArray);
 
-        if (expectedQRDataArray.includes(data)) {
+        if (expectedQRDataArray.includes(data.text)) {
           const res = await axios.post(
             "https://qr-code-checkin.vercel.app/api/employee/check-attendance",
             { employeeID: userID },
