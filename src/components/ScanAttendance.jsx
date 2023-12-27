@@ -14,7 +14,7 @@ const ScanQR = () => {
       try {
         setAttendanceChecked(true);
         const timestamp = new Date().toISOString();
-        const expectedQRDataArray = department.map(dept => `QR code for department ${dept.name} - ${timestamp}`);
+        const expectedQRDataArray = department.map(dept => `QR code for department ${dept.name}`);
 
         if (expectedQRDataArray.includes(data)) {
           const res = await axios.post(
