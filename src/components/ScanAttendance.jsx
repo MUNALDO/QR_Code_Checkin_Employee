@@ -9,10 +9,9 @@ const ScanQR = () => {
   } = useContext(AuthContext);
   const [isAttendanceChecked, setAttendanceChecked] = useState(false);
 
-  console.log("a");
-
   const handleScan = async (data) => {
     if (data && !isAttendanceChecked) {
+      console.log("a");
       try {
         setAttendanceChecked(true);
         // const timestamp = new Date().toISOString();
@@ -40,6 +39,8 @@ const ScanQR = () => {
       } finally {
         setAttendanceChecked(false);
       }
+    } else {
+        console.log("b");
     }
   };
 
