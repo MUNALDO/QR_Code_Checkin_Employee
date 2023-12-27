@@ -40,6 +40,8 @@ const ScanQR = () => {
     }
   };
 
+  console.log(handleScan);
+
   const handleError = (error) => {
     console.error("QR code scanning error:", error);
   };
